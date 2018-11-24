@@ -1,4 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Is It Done?
+This project aims to provide a basic functionality of creating to do lists.
+
+## Features
+1. You can create and manage projects
+1. You can create new entities from a list of entity types. By default there are no entity type values present, so an add entity button is presented. The entities are global, and once created can be used in any project.
+1. You can add a type entity, like **video** and you can add and manage tasks to it. When you add an entity, the last one added remains selected so the next one created is easier to be done as mostly you don't change the type.
+1. You can add Chapters and manage them. Chapters are dependant on the project they are created from.
+1. Each new entity type value needs to be part of a chapter. When no chapters are present an **add chapter** button needs to be present.
+1. The tasks have the behaviour of a boolean, meaning they can be toggled on or off. By default they are off.
+1. The tasks can be added inside a project
+
 
 ## Available Scripts
 
@@ -27,18 +38,5 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# contact
+You can [contact us here](https://info.codetap.io/#chat)
