@@ -7,7 +7,6 @@ const IsItDone = ({}) => {
       <div className="IsItDone">
         <h1>It works</h1>
         <Input term="Super nice" />
-        <Input />
       </div>
     );
 }
