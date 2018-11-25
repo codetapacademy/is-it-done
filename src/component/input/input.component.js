@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Input = ({term}) => {
-  const [searchTerm, updateSearchTerm] = useState(term || 'asd');
-  const handleSearchTermChange = e => {
-    updateSearchTerm(e.target.value)
-  }
+const Input = ({term, handleSearchTermChange}) => {
+  // const handleSearchTermChange = e => {
+  //   updateSearchTerm(e.target.value)
+  // }
   return (
     <div>
-      <div>{searchTerm}</div>
-      <input value={searchTerm} onChange={handleSearchTermChange} />
+      <div>{term}</div>
+      <input value={term} onChange={handleSearchTermChange} />
     </div>
   )
 }
