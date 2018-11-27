@@ -4,7 +4,7 @@ import './index.css';
 import IsItDone from './is-it-done';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<IsItDone />, document.getElementById('root'));
+ReactDOM.render(<IsItDone />, document.getElementById('react-will-render-the-app-in-here'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
