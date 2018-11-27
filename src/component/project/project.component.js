@@ -1,8 +1,10 @@
 import React, { useReducer, useRef } from 'react';
-import { projectReducer } from './project.reducer'
+import { projectReducer } from './project.reducer';
+
+const shuffleValue = arr => arr.split('').map(v => [Math.random(), v]).sort((a,b) => a[0] - b[0]).map(v => v[1]).join('');
+const getId = () => shuffleValue(~~(Math.random() * 1000000000) + 'abcdef')
 
 const Project = () => {
-  const getId = () => ~~(Math.random() * 1000000000)
   const initialState = [
     {name: "Intro into React for Total Beginners", id: getId()},
     {name: "Write JavaScript faster with ES6", id: getId()}
@@ -10,11 +12,13 @@ const Project = () => {
   const [projectList, dispatchProjectList] = useReducer(projectReducer, initialState);
   const projectName = useRef();
 
+  const handleProjectRemove = payload => dispatchProjectList({type: 'project_remove', payload})
+
   const renderProjectList = () => {
     return projectList.map(project => (
       <div key={project.id}>
         <span>{project.name}</span>
-        <button onClick={() => dispatchProjectList({type: 'project_remove', payload: project.id})}>&times;</button>
+        <button onClick={() => handleProjectRemove(project.id)}>&times;</button>
       </div>
     ))
   }
